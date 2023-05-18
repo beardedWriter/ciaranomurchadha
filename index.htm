@@ -51,12 +51,24 @@
   </div>
 </section> -->
 
-<section class="parallax-window" data-parallax="scroll" data-image-src="img/webp/st_flannans_college_ennis_co_clare.webp">
+<!-- <section class="parallax-window" data-parallax="scroll" data-image-src="img/webp/st_flannans_college_ennis_co_clare.webp">
   <div class="parallax-content">
     <h2 class="text-center text-light">The College of St Flannans College at Ennis</h2>
     <p class="text-center text-light">Ciarán Ó Murchadha new Book</p>
   </div>
+</section> -->
+
+<section class="parallax-window" data-jarallax data-speed="0.5" data-image-src="img/webp/st_flannans_college_ennis_co_clare.webp">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-light">Welcome to My Website</h2>
+        <p class="text-light">Discover the captivating world of my books</p>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 
   <!-- About Section -->
@@ -158,6 +170,8 @@ The College of St Flannan at Ennis will be launched on Tuesday 23 May 2023 at 8p
   });
 </script> -->
 
+
+<!--
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var parallaxElements = document.querySelectorAll('.parallax-window');
@@ -165,8 +179,17 @@ The College of St Flannan at Ennis will be launched on Tuesday 23 May 2023 at 8p
       new Parallax(element);
     });
   });
-</script>
+</script> -->
 
+
+<script src="https://cdn.jsdelivr.net/npm/jarallax@1.12.1/dist/jarallax.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    jarallax(document.querySelectorAll('.parallax-window'), {
+      speed: 0.5
+    });
+  });
+</script>
 
 
 </body>
