@@ -1,29 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <title>Bootstrap Webpage</title>
+  <title>Writer's Landing Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
 </head>
-<body>
-	<div>
-		<h1>New Website</h1>
-  		<p>Hello World</p>
-  		<p>Just using a test image (.wepb) form the web off JQ's website</p>
-  		<img src="https://www.echoesfromacivilwar.ie/img/webp/dr_ciaran_o_murchadha.webp"/>
-  		<p>Just using a test image (.wepb) from related Github repo</p>
-  		<img src="img/webp/408203.webp"/>
-  		<p>Just using a test image (.jpg) from related Github repo</p>
-  		<img src="img/jpg/408203.jpg"/>
-  		<p>Just using a test image (.png) from related Github repo</p>
-  		<img src="img/png/408203.png"/>
 
-  <!-- Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Writer's Name</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#books">Books</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero bg-primary text-light text-center py-5">
+    <div class="container">
+      <h1 class="display-4">Welcome to Writer's Landing Page</h1>
+      <p class="lead">Explore the fascinating world of books by Writer's Name</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h2>About Writer's Name</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet turpis ut porttitor aliquet.
+            Sed commodo fermentum lectus in volutpat.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="writer-image.jpg" alt="Writer's Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Books Section -->
+  <section id="books" class="bg-light py-5">
+    <div class="container">
+      <h2>Books by Writer's Name</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <img src="book1.jpg" alt="Book 1" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Book 1</h5>
+              <p class="card-text">Description of Book 1.</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="book2.jpg" alt="Book 2" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Book 2</h5>
+              <p class="card-text">Description of Book 2.</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <img src="book3.jpg" alt="Book 3" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">Book 3</h5>
+              <p class="card-text">Description of Book 3.</p>
+              <a href="#" class="btn btn-primary">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h2>Contact Writer's Name</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquet turpis ut porttitor aliquet. Sed
+        commodo fermentum lectus in volutpat.</p>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-light text-center py-3">
+    <div class="container">
+      <p>© 2023 Writer's Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
 
