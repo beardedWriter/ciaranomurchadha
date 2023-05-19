@@ -9,9 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/jarallax@1.11.0/dist/jarallax.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
-  
+
   <style>
   	*{
   	    font-family: 'Lora', serif;
@@ -136,7 +134,7 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
   <div class="container">
     <h2>&nbsp; Contact Ciarán Ó Murchadha</h2>
       <p>For inquiries regarding talks and presentations on the books I have written, please feel free to contact me via email. I would be delighted to discuss speaking engagements and share insights about my work. You can use the contact form below reach me by email. Thank you for your interest.</p>
-    <form class="p-3" action="https://formspree.io/f/mlekvyng" method="POST" novalidate>
+    <form class="p-3" action="https://formspree.io/f/xrgvdwwy" method="POST">
     
       <div class="form-group">
         <small style="padding:1.5em 0;color:#ff4f4f;font-weight:bold;"></small>
@@ -144,27 +142,27 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
       
       <div class="mb-3">
         <label for="emailAddress" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Email Address:</label>
-        <input name="emailAddress" type="email" class="form-control" id="emailAddress" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Enter contact email address" aria-describedby="emailHelp">
+        <input name="emailAddress" type="email" class="form-control" id="emailAddress" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Enter your email address" aria-describedby="emailHelp" required>
         <div id="emailHelp" class="form-text">Please enter a valid email address.</div>
       </div>
       
       <div class="mb-3">
         <label for="contactNumber" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Contact Phone Number:</label>
-        <input name="contactNumber" type="text" class="form-control" id="contactNumber" pattern="(00|0)\d+" placeholder="Enter contact phone number">
+        <input name="contactNumber" type="text" class="form-control" id="contactNumber" pattern="^(00|\+|0)\d{7,20}$" placeholder="Enter your phone number" required>
       </div>
       
       <div class="mb-3">
         <label for="emailMessage" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Message:</label>
-        <textarea name="emailMessage" class="form-control" id="emailMessage" rows="4" placeholder="Enter your message"></textarea>
+        <textarea name="emailMessage" class="form-control" id="emailMessage" rows="4" placeholder="Enter your message"  required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">SUBMIT&nbsp;<i class="bi bi-mouse3"></i></button>
       <div id="emailSubmissionHelp" class="form-text" style="padding:1.5em 0;color:#ff4f4f;font-weight:bold;">
       * Required Information - Please make sure to read the following information before submitting. Once you click the "Submit" button, you might need to complete a simple picture puzzle called Captcha to confirm that you're not a robot. This is done to prevent spam messages created by automated programs. We value your assistance in combating unwanted spam. Thank you!
       </div>
+      
     </form><!-- Form END -->
   </div>
 </section>
-
 
   <!-- Footer -->
   <footer class="bg-dark text-light text-center py-3">
@@ -174,6 +172,19 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
   </footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+	
+		<script>
+			var emailAddressInput = document.getElementById("emailAddress");
+			emailAddressInput.setCustomValidity("Please enter a valid email address.");
+			
+			emailForm.addEventListener("submit", function(event) {
+    				if (!emailAddressInput.validity.valid) {
+      				emailAddressInput.setCustomValidity("Email address format entered is not correct");
+      				event.preventDefault(); // Prevent form submission if validation fails
+    				}
+  });
+		</script>
+
 
 </body>
 

@@ -9,9 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-  <!-- <script src="https://cdn.jsdelivr.net/npm/jarallax@1.11.0/dist/jarallax.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> -->
   
+  <!-- [2] Bootstrap's specific general FREE icon set-->
+  <!-- This is loaded asynrously to allow page render/draw/display quicker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+
   <style>
   	*{
   	    font-family: 'Lora', serif;
@@ -24,45 +26,110 @@
             background-attachment: fixed;
             height: 500px;
 	}
+	
+	
+	.error-message {
+		  color: red;
+		}
   </style>
 </head>
 
 <body>
   
   
-    <!-- Contact Section -->
-  <section class="bg-dark text-light p-4 text-center text-sm-start">
-  <div class="container">
-    <h2>&nbsp; Contact Ciarán Ó Murchadha</h2>
-      <p>For inquiries regarding talks and presentations on the books I have written, please feel free to contact me via email. I would be delighted to discuss speaking engagements and share insights about my work. You can use the contact form below reach me by email. Thank you for your interest.</p>
-    <form class="p-3" action="https://formspree.io/f/mlekvyng" method="POST" novalidate>
-    
+<div class="container mt-5">
+    <h1>Email Form</h1>
+    <form id="emailForm" method="post">
       <div class="form-group">
-        <small style="padding:1.5em 0;color:#ff4f4f;font-weight:bold;"></small>
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter a valid email address" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+        <div class="invalid-feedback">! Email format is incorrect please check your email address</div>
       </div>
-      
-      <div class="mb-3">
-        <label for="emailAddress" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Email Address:</label>
-        <input name="emailAddress" type="email" class="form-control" required id="emailAddress" placeholder="Enter contact email address" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Please enter a valid email address.</div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Enter a valid phone number" pattern="^(00|\+|0)\d{7,20}$" required>
+        <div class="invalid-feedback">Please enter a valid phone number starting with 00 or 0.</div>
       </div>
-      
-      <div class="mb-3">
-        <label for="contactNumber" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Contact Phone Number:</label>
-        <input name="contactNumber" type="text" class="form-control" required id="contactNumber" placeholder="Enter contact phone number">
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea class="form-control" id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
       </div>
-      
-      <div class="mb-3">
-        <label for="emailMessage" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Message:</label>
-        <textarea name="emailMessage" class="form-control" required id="emailMessage" rows="4" placeholder="Enter your message"></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">SUBMIT&nbsp;<i class="bi bi-mouse3"></i></button>
-      <div id="emailSubmissionHelp" class="form-text" style="padding:1.5em 0;color:#ff4f4f;font-weight:bold;">
-      * Required Information - Please make sure to read the following information before submitting. Once you click the "Submit" button, you might need to complete a simple picture puzzle called Captcha to confirm that you're not a robot. This is done to prevent spam messages created by automated programs. We value your assistance in combating unwanted spam. Thank you!
-      </div>
-    </form><!-- Form END -->
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </div>
-</section>
+  
+  
+  <div class="container mt-5">
+    <h1>Email Form</h1>
+    <form id="emailForm" method="post">
+      <div class="form-group">
+	  <label for="email">Email:</label>
+	 
+	      	
+	      	<input type="email" id="emailInput" required><span id="emailError" class="error-message"></span>
+	   
+      </div>
+    
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+    <!-- Custom JavaScript -->
+ <script>
+  // Get the email input and error message elements
+var emailInput = document.getElementById('emailInput');
+var emailError = document.getElementById('emailError');
+
+// Function to validate email input
+function validateEmail() {
+  var email = emailInput.value;
+  const emailRegex = /^(([^<>/()[\]\\.,;:\?\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\\.,;:\s@\"]+\.)+[^<>()[\]\\.,;:\s@\"]{2,})$/i;
+
+  if (!emailRegex.test(email)) {
+    // Display warning icon to indicate to user their input is incorrect
+    emailError.innerHTML = '<span>&nbsp;<i class="bi bi-exclamation-diamond"></i></span>';
+    // Add CSS styles using JavaScript
+    emailError.style.color = 'red';
+    emailError.style.fontSize = '1.25em';
+    emailError.style.fontWeight = 'bold';
+    emailInput.classList.add('is-invalid');
+  } else {
+  // Display green tick icon to indicate to user their input is correct
+    // Clear error message and remove input field highlight
+    emailError.innerHTML = '<span>&nbsp;<i class="bi bi-check-circle"></i></span>';
+    emailError.style.color = 'green';
+    emailError.style.fontSize = '1.25em';
+    emailError.style.fontWeight = 'bold';
+  }
+}
+
+
+// Add event listener to validate email on input change
+emailInput.addEventListener('input', validateEmail);
+  </script>
+  
+  <!-- Custom JavaScript -->
+  <!-- <script>
+    // Add validation using JavaScript
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script> -->
+
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
