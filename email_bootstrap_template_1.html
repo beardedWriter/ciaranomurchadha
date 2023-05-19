@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <title>Bootstrap Webpage</title>
+</head>
+<body>
+  
+  
+    <!-- Contact Section -->
+  <section class="bg-dark text-light p-4 text-center text-sm-start">
+  <div class="container">
+    <h2>&nbsp; Contact Ciarán Ó Murchadha</h2>
+      <p>For inquiries regarding talks and presentations on the books I have written, please feel free to contact me via email. I would be delighted to discuss speaking engagements and share insights about my work. You can use the contact form below reach me by email. Thank you for your interest.</p>
+    <form class="p-3" action="https://formspree.io/f/mlekvyng" method="POST" novalidate>
+    
+      <div class="form-group">
+        <small style="padding:1.5em 0;color:#ff4f4f;font-weight:bold;"></small>
+      </div>
+      
+      <div class="mb-3">
+        <label for="emailAddress" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Email Address:</label>
+        <input name="emailAddress" type="email" class="form-control" id="emailAddress" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" placeholder="Enter contact email address" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Please enter a valid email address.</div>
+      </div>
+      
+      <div class="mb-3">
+        <label for="contactNumber" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Contact Phone Number:</label>
+        <input name="contactNumber" type="text" class="form-control" id="contactNumber" pattern="(00|0)\d+" placeholder="Enter contact phone number">
+      </div>
+      
+      <div class="mb-3">
+        <label for="emailMessage" class="form-label"><span style="color:#ff4f4f">*</span>&nbsp;Message:</label>
+        <textarea name="emailMessage" class="form-control" id="emailMessage" rows="4" placeholder="Enter your message"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">SUBMIT&nbsp;<i class="bi bi-mouse3"></i></button>
+      <div id="emailSubmissionHelp" class="form-text" style="padding:1.5em 0;color:#ff4f4f;font-weight:bold;">
+      * Required Information - Please make sure to read the following information before submitting. Once you click the "Submit" button, you might need to complete a simple picture puzzle called Captcha to confirm that you're not a robot. This is done to prevent spam messages created by automated programs. We value your assistance in combating unwanted spam. Thank you!
+      </div>
+    </form><!-- Form END -->
+  </div>
+</section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
