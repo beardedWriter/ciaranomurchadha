@@ -38,25 +38,38 @@
   </div>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Regular expression for email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+ <script>
+// Regular expression for email validation
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Function to check email address validity
-    function validateEmail() {
-      const emailInput = document.getElementById("emailAddress");
-      const errorMessage = document.getElementById("emailErrorMessage");
+// Function to check email address validity
+function validateEmail() {
+  const emailInput = document.getElementById("emailAddress");
+  const errorMessage = document.getElementById("emailErrorMessage");
 
-      if (!emailRegex.test(emailInput.value)) {
-        errorMessage.textContent = "Email address is not correctly entered";
-      } else {
-        errorMessage.textContent = "";
-      }
-    }
+  if (!emailRegex.test(emailInput.value)) {
+    errorMessage.textContent = "Email address is not correctly entered";
+  } else {
+    errorMessage.textContent = "";
+  }
+}
 
-    // Add change event listener to the email input
-    document.getElementById("emailAddress").addEventListener("change", validateEmail);
-  </script>
+// Function to clear error message when the email input is focused
+function clearErrorMessage() {
+  const errorMessage = document.getElementById("emailErrorMessage");
+  errorMessage.textContent = "";
+}
+
+// Add change and focus event listeners to the email input
+const emailInput = document.getElementById("emailAddress");
+emailInput.addEventListener("change", validateEmail);
+emailInput.addEventListener("focus", clearErrorMessage);
+
+</script>
+
+   
+
+
 </body>
 
 </html>
