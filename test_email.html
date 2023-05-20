@@ -49,8 +49,10 @@ function validateEmail() {
 
   if (!emailRegex.test(emailInput.value)) {
     errorMessage.textContent = "Incorrect format. Please amend email address";
+    emailError.style.color = 'red';
   } else {
     errorMessage.textContent = "Looks good, please continue";
+    emailError.style.color = 'green';
   }
 }
 
