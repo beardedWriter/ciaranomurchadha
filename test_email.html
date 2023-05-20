@@ -48,9 +48,9 @@ function validateEmail() {
   const errorMessage = document.getElementById("emailErrorMessage");
 
   if (!emailRegex.test(emailInput.value)) {
-    errorMessage.textContent = "Email address is not correctly entered";
+    errorMessage.textContent = "Incorrect format. Please amend email address";
   } else {
-    errorMessage.textContent = "";
+    errorMessage.textContent = "Looks good, please continue";
   }
 }
 
