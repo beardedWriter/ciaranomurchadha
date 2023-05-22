@@ -193,7 +193,7 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
   });
 		</script>-->
 		
-   	<script>
+<script>
    	console.log("test is this console.log working?????");
    	
    	var submitButton = document.getElementById("submitEmailButton");
@@ -281,6 +281,8 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 	// Calls for the checkEmailContent function after user hits tabs or clicks into new field 
 	const emailMessageInput = document.getElementById("emailMessage");
 	emailMessageInput.addEventListener("change", checkEmailContent);
+	emailMessageInput.addEventListener("touchup", checkEmailContent);
+	emailMessageInput.addEventListener("keyup", checkEmailContent);
 	
 	// Function to check if all conditions are met and allow submission
 	function checkSubmission() {
