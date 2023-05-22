@@ -195,7 +195,8 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 		
    	<script>
    	console.log("test is this console.log working?????");
-   		
+   	
+   	var submitButton = document.getElementById("submitEmailButton");
    	var emailAddessInputAdequate=false;
 	var contactNumberInputAdequate=false;
 	var messageInputAdequate=false;
@@ -215,6 +216,7 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 	    errorMessage.textContent = "Email address is not correctly entered";
 	    errorMessage.style.color = "red";
 	    console.log("email is bad");
+	    emailAddessInputAdequate = false;
 	    checkSubmission();
 	  } else {
 	    errorMessage.textContent = "Looks good, please continue";
@@ -238,6 +240,7 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 	    errorMessage.textContent = "Phone number is not correctly entered";
 	    errorMessage.style.color = "red";
 	    console.log("phonenumber is bad");
+	    contactNumberInputAdequate = false;
 	    checkSubmission();
 	  } else {
 	    errorMessage.textContent = "Looks good, please continue";
@@ -257,9 +260,11 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 	      	messageInputAdequate = true;
 	      	console.log(messageInputAdequate);
 		console.log("Email message has content");
+		messageInputAdequate=true;
 		checkSubmission();
 	      } else {
 		console.log("No content entered");
+		messageInputAdequate=false;
 		checkSubmission();
 	   }
 	}
@@ -291,15 +296,17 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 
 	// Function to disable the submit button
 	function disableSubmitButton() {
-	  var submitButton = document.getElementById("submitEmailButton");
 	  submitButton.disabled = true;
 	}
 	
 	// Function to enable the submit button
 	function enableSubmitButton() {
-	  var submitButton = document.getElementById("submitEmailButton");
 	  submitButton.disabled = false;
 	}
+	
+	// Add event listener to the submit button
+	submitButton.addEventListener("click", checkSubmission);
+
 	
    	</script>
 
