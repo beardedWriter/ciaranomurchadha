@@ -160,10 +160,10 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 			<textarea name="emailMessage" class="form-control" id="emailMessage" rows="4" placeholder="Enter your message" required></textarea>
 		      </div>
 		      
-		      <button type="submit" class="mt-3 btn btn-primary">SUBMIT</button>
+		      <button type="submit" id="submitEmailButton" class="mt-3 btn btn-primary">SUBMIT</button>
 		      
 		      <div id="emailSubmissionHelp" class="text-right form-text" style="padding:1.5em 0;color:#ff4f4f;font-weight:bold;">
-		      * Required Information - Please make sure to read the following information before submitting. Once you click the "Submit" button, you might need to complete a simple picture puzzle called Captcha to confirm that you're not a robot. This is done to prevent spam messages created by automated programs. We value your assistance in combating unwanted spam. Thank you!
+		      <p>* Required Information - Please make sure to read the following information before submitting. Once you click the "Submit" button, you might need to complete a simple picture puzzle called Captcha to confirm that you're not a robot. This is done to prevent spam messages created by automated programs. We value your assistance in combating unwanted spam. Thank you!</p>
 		      </div>
 		      
 		</form>
@@ -193,7 +193,13 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
   });
 		</script>-->
 		
-	<script>
+   	<script>
+   	console.log("test is this console.log working?????");
+   		
+   	var emailAddessInputAdequate=false;
+	var contactNumberInputAdequate=false;
+	var messageInputAdequate=false;
+	
 	// Regular expression for email validation
 	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -208,12 +214,21 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 	  if (!emailRegex.test(emailInput.value)) {
 	    errorMessage.textContent = "Email address is not correctly entered";
 	    errorMessage.style.color = "red";
+	    console.log("email is bad");
+	    checkSubmission();
 	  } else {
 	    errorMessage.textContent = "Looks good, please continue";
 	    errorMessage.style.color = "green";
+	    emailAddessInputAdequate = true;
+	    console.log("email is good");
+	    console.log(emailAddessInputAdequate);
+	    checkSubmission();
 	  }
 	}
 
+
+	console.log(emailAddessInputAdequate);		
+		
 	// Function to check phone number validity
 	function validatePhoneNumber() {
 	  const phoneNumberInput = document.getElementById("contactNumber");
@@ -222,19 +237,69 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 	  if (!phoneNumberRegex.test(phoneNumberInput.value)) {
 	    errorMessage.textContent = "Phone number is not correctly entered";
 	    errorMessage.style.color = "red";
+	    console.log("phonenumber is bad");
+	    checkSubmission();
 	  } else {
 	    errorMessage.textContent = "Looks good, please continue";
 	    errorMessage.style.color = "green";
+	    contactNumberInputAdequate = true;
+	    console.log("phone number is good");
+	    console.log(contactNumberInputAdequate);
+	    checkSubmission();
 	  }
 	}
+	
+	// Function to check email message for content
+	function checkEmailContent() {
+      		var emailMessageInput = document.getElementById("emailMessage");
 
-	// Calls for the validateEmail function after user hits returns or clicks into new field 
+	      if (emailMessageInput.value.trim() !== "") {
+	      	messageInputAdequate = true;
+	      	console.log(messageInputAdequate);
+		console.log("Email message has content");
+		checkSubmission();
+	      } else {
+		console.log("No content entered");
+		checkSubmission();
+	   }
+	}
+
+
+	// Calls the validateEmail function after user hits returns, tabs or clicks into new field 
 	const emailInput = document.getElementById("emailAddress");
 	emailInput.addEventListener("change", validateEmail);
 
-	// Calls for the validatePhoneNumber function after user hits returns or clicks into new field 
+	// Calls the validatePhoneNumber function after user hits return, tabs or clicks into new field 
 	const phoneNumberInput = document.getElementById("contactNumber");
 	phoneNumberInput.addEventListener("change", validatePhoneNumber);
+	
+	// Calls for the checkEmailContent function after user hits tabs or clicks into new field 
+	const emailMessageInput = document.getElementById("emailMessage");
+	emailMessageInput.addEventListener("change", checkEmailContent);
+	
+	// Function to check if all conditions are met and allow submission
+	function checkSubmission() {
+	  if (emailAddessInputAdequate && contactNumberInputAdequate && messageInputAdequate) {
+	    console.log("Email submission allowed!");
+	    enableSubmitButton();
+	  } else {
+	    console.log("Incomplete information. Cannot submit email yet.");
+	    // Disable the submit button or prevent message posting
+	    disableSubmitButton();
+	  }
+	}
+
+	// Function to disable the submit button
+	function disableSubmitButton() {
+	  var submitButton = document.getElementById("submitEmailButton");
+	  submitButton.disabled = true;
+	}
+	
+	// Function to enable the submit button
+	function enableSubmitButton() {
+	  var submitButton = document.getElementById("submitEmailButton");
+	  submitButton.disabled = false;
+	}
 	
    	</script>
 
