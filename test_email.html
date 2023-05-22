@@ -19,13 +19,14 @@
     <form id="emailForm">
       <div class="mb-3">
         <label for="emailAddress" class="form-label">Email Address:</label>
-        <input type="email" class="form-control" id="emailAddress" name="emailAddress" required>
+        <input type="email" class="form-control" id="emailAddress" name="emailAddress">
         <div id="emailErrorMessage" class="form-text error-message"></div>
       </div>
 
       <div class="mb-3">
         <label for="contactNumber" class="form-label">Contact Number:</label>
-        <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required>
+        <input type="tel" class="form-control" id="contactNumber" name="contactNumber">
+        <div id="phoneNumberErrorMessage" class="form-text error-message"></div>
       </div>
 
       <div class="mb-3">
@@ -36,40 +37,106 @@
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
+  
+  <hr /> 
+  
+  
+  <div class="container">
+    <h1>Tab Event Listener Form</h1>
+    <form id="tabForm">
+      <div class="mb-3">
+        <label for="tab1" class="form-label">Email Address:</label>
+        <input type="email" class="form-control" id="email2" name="emailAddress" required>
+        <div id="emailErrorMessage" class="form-text error-message"></div>
+      </div>
+
+      <div class="mb-3">
+        <label for="contactNumber" class="form-label">Contact Number:</label>
+        <input type="tel" class="form-control" id="contact2" name="contactNumber" required>
+        <div id="phoneNumberErrorMessage" class="form-text error-message"></div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
 
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
- <script>
-// Regular expression for email validation
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+ 
+  <script>
+	// Regular expression for email validation
+	const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Function to check email address validity
-function validateEmail() {
-  const emailInput = document.getElementById("emailAddress");
-  const errorMessage = document.getElementById("emailErrorMessage");
+	// Regular expression for phone number validation
+	const phoneNumberRegex = /^(?:\+|0|00{2})\d{7,}$/;
 
-  if (!emailRegex.test(emailInput.value)) {
-    errorMessage.textContent = "Incorrect format. Please amend email address";
-    errorMessage.style.color = "red";
-  } else {
-    errorMessage.textContent = "Looks good, please continue";
-    errorMessage.style.color = "green";
-  }
-}
+	// Function to check email address validity
+	function validateEmail() {
+	  const emailInput = document.getElementById("emailAddress");
+	  const errorMessage = document.getElementById("emailErrorMessage");
 
-// Function to clear error message when the email input is focused
-function clearErrorMessage() {
-  const errorMessage = document.getElementById("emailErrorMessage");
-  errorMessage.textContent = "";
-}
+	  if (!emailRegex.test(emailInput.value)) {
+	    errorMessage.textContent = "Email address is not correctly entered";
+	    errorMessage.style.color = "red";
+	  } else {
+	    errorMessage.textContent = "Looks good, please continue";
+	    errorMessage.style.color = "green";
+	  }
+	}
 
-// Add change and focus event listeners to the email input
-const emailInput = document.getElementById("emailAddress");
-emailInput.addEventListener("change", validateEmail);
-emailInput.addEventListener("focus", clearErrorMessage);
+	// Function to check phone number validity
+	function validatePhoneNumber() {
+	  const phoneNumberInput = document.getElementById("contactNumber");
+	  const errorMessage = document.getElementById("phoneNumberErrorMessage");
 
-</script>
+	  if (!phoneNumberRegex.test(phoneNumberInput.value)) {
+	    errorMessage.textContent = "Phone number is not correctly entered";
+	    errorMessage.style.color = "red";
+	  } else {
+	    errorMessage.textContent = "Looks good, please continue";
+	    errorMessage.style.color = "green";
+	  }
+	}
 
-   
+	// Function to clear error message when the email input is focused
+	function clearErrorMessage() {
+	  const errorMessage = document.getElementById("emailErrorMessage");
+	  errorMessage.textContent = "";
+	}
+
+	// Add change and focus event listeners to the email input
+	const emailInput = document.getElementById("emailAddress");
+	emailInput.addEventListener("change", validateEmail);
+	emailInput.addEventListener("focus", clearErrorMessage);
+
+	// Add change event listener to the phone number input
+	const phoneNumberInput = document.getElementById("contactNumber");
+	phoneNumberInput.addEventListener("change", validatePhoneNumber);
+   </script>
+
+ 	<script>
+  	// Regular expression for email validation
+  	const emailRegex2 = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	
+	function validateEmail2() {
+  		const inputField1 = document.getElementById("email2");
+		const inputField2 = document.getElementById("contact2");
+		
+		if (!emailRegex2.test(inputField1.value)) {
+	    		errorMessage.textContent = "Email address is not correctly entered";
+	    		errorMessage.style.color = "red";
+	  	} else {
+	    		errorMessage.textContent = "Looks good, please continue";
+	    		errorMessage.style.color = "green";
+	  	}
+	}
+
+	inputField1.addEventListener("keydown", function(event) {
+ 	 if (event.key === "Tab") {
+    event.preventDefault(); // Prevent default tab behavior
+    inputField2.focus(); // Move focus to inputField2
+ 	 }
+	});
+	</script>
 
 
 </body>
