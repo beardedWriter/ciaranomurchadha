@@ -10,6 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
+  <!-- ICON sets (using FREE ones from [1] Font-Awesome and [2] Bootstrap) -->
+	<!-- [1] Font-Awesome specific web domain icon set-->
+	<link rel="preconnect" href="https://ka-f.fontawesome.com" />
+	<script src="https://kit.fontawesome.com/7d291aff1b.js" crossorigin="anonymous" defer></script>
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css" />
+
   <style>
   	*{
   	    font-family: 'Lora', serif;
@@ -25,7 +32,21 @@
 	
 	.form-text{		color:#ff4f4f;
 	}
+
+	.nav-link {
+	  display: block;
+	  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+	  font-size: var(--bs-nav-link-font-size);
+	  font-weight: var(--bs-nav-link-font-weight);
+	  color: var(--bs-nav-link-color);
+	  text-decoration: none;
+	  background: 0 0;
+	  background-color: rgba(0, 0, 0, 0);
+	  border: 0;
+	  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+  }
   </style>
+
 </head>
 
 <body>
@@ -93,12 +114,13 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
   </section>
 
 <!-- Purchase Book Section -->
-<section id="purchase" class="bg-light py-5">
+<!-- <section id="purchase" class="bg-light py-5">
 <div class="container">
   <div class="row">
     <div class="col-md-6">
       <div class="row">
         <div class="col-md-6">
+        	<h4 class="text-center">Ireland/NI</h4>
           <a href="STRIPE_PURCHASE_LINK_IRELAND_PAPERBACK" class="btn btn-primary btn-block">Ireland/NI - Paperback</a>
         </div>
         <div class="col-md-6">
@@ -130,7 +152,51 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
     </div>
   </div>
 </div>
-</section>
+</section> -->
+
+<!-- Purchase Section Start-->
+        <section class="bg-dark">
+            <div class="container p-4 text-light">
+							<div class="row g-3">
+								<div class="col-md pt-2 pb-2">
+									<h2 class="pt-1">Order Your Copy</h2>
+									<p class="lead">The College of St Flannans College at Ennis by Ciarán Ó Murchadha (Paperback & Hardback versions available till stock lasts)Signed copies are to be requested via <a id="emailFormLink" href="#contact">email form&nbsp;<i class="fas fa-link"></i></a></p>
+									<br />
+									<p class="lead"><span class="fw-bold">€35 Paperback/€45 Hardback &nbsp;</span>Ireland/N.I. (incl. P&P)</p>
+									<a href="https://buy.stripe.com/aEUbK3gTrdgzeekeUW" class="btn btn-success"><span class="text-dark  fw-bold"></span><span class="fi fi-ie"></span></span>&nbsp;<i class="bi bi-arrow-right"></i>&nbsp;&nbsp;IRELAND&nbsp;<i class="commonPaymentMethods fab fa-cc-visa"></i>&nbsp;<i class="commonPaymentMethods fab fa-cc-mastercard"></i>&nbsp;<i class="commonPaymentMethods fab fa-google-pay"></i>&nbsp;<i class="commonPaymentMethods fab fa-apple-pay"></i></span></a>
+									<br />
+									<br />
+									<p class="lead"><span class="fw-bold">€40 Paperback/€50 Hardback &nbsp;</span>UK Mainland (incl. P&P)</p>
+									<a href="https://buy.stripe.com/8wMbK346F6Sb3zG4gh" class="btn btn-primary"><span class="text-dark  fw-bold"></span><span class="fi fi-gb"></span>&nbsp;<i class="bi bi-arrow-right"></i>&nbsp;&nbsp;UK/NI&nbsp;<i class="commonPaymentMethods fab fa-cc-visa"></i>&nbsp;<i class="commonPaymentMethods fab fa-cc-mastercard"></i>&nbsp;<i class="commonPaymentMethods fab fa-google-pay"></i>&nbsp;<i class="commonPaymentMethods fab fa-apple-pay"></i></span></a>
+									<br />
+									<br />
+									<p class="lead"><span class="fw-bold">€46 Paperback/€56 Hardback&nbsp;</span>USA/Canada (incl. P&P)</p>
+									<a href="https://buy.stripe.com/5kA8xR5aJfoH2vC8wA" class="btn btn-warning"><span class="text-dark fw-bold"></span><span class="fi fi-us"></span>&nbsp;<span class="fi fi-ca"></span>&nbsp;<i class="bi bi-arrow-right"></i>&nbsp;&nbsp;US/CAN&nbsp;<i class="commonPaymentMethods fab fa-cc-visa"></i>&nbsp;<i class="commonPaymentMethods fab fa-cc-mastercard"></i>&nbsp;<i class="commonPaymentMethods fab fa-google-pay"></i>&nbsp;<i class="commonPaymentMethods fab fa-apple-pay"></i></span></a>		
+									<br />
+									<br />
+									<p class="lead"><span class="fw-bold">€55 Paperback/€65 Hardback&nbsp;</span>Rest of World (incl. P&P)</p>
+									<a href="https://buy.stripe.com/00g4hBcDba4n2vC003" class="btn btn-warning"><span class="text-dark fw-bold"><span>&#x1F30D;</span>&nbsp;<i class="bi bi-arrow-right"></i>&nbsp;&nbsp;Rest of World&nbsp;<i class="commonPaymentMethods fab fa-cc-visa"></i>&nbsp;<i class="commonPaymentMethods fab fa-cc-mastercard"></i>&nbsp;<i class="commonPaymentMethods fab fa-google-pay"></i>&nbsp;<i class="commonPaymentMethods fab fa-apple-pay"></i></span></a>
+									<br />
+									<ul>
+									<li>Prices are inclusive of Postage & Packaging</li>
+									<li>Prices are in EURO</li>
+									<li><span><i class="paymentMethodIcons fab fa-cc-visa"></i>&nbsp;&nbsp;<i class="paymentMethodIcons fab fa-cc-mastercard"></i>&nbsp;&nbsp;<i class="paymentMethodIcons fab fa-cc-discover"></i>&nbsp;&nbsp;<i class="paymentMethodIcons fab fa-cc-diners-club"></i>&nbsp;&nbsp;<i class="paymentMethodIcons fab fa-cc-amex"></i>&nbsp;&nbsp;<i class="paymentMethodIcons fab fa-google-pay"></i>&nbsp;&nbsp;<i class="paymentMethodIcons fab fa-apple-pay"></i>&nbsp;&nbsp;</span></li>
+									<li>Currency exchange rates may be applied by your payment processor</li>
+									<li>Credit/Debit card payments are taken by STRIPE</li>
+									<li class="fw-bold">NOTE: You will be redirected to STRIPE's website to purchase the book</li>
+									</ul>
+									<!-- <p class="lead"><span class="fw-bold">Available on other online book stores</span></p>
+									<ul>
+									<li><a href="https://www.buythebook.ie/product/echoes-from-a-civil-war-paperback/">buythebook.ie&nbsp;<i class="fas fa-link"></i></li>
+									<li><a href="https://thebookshop.ie/queally-joe-echoes-from-a-civil-war-pb-signed-brand-new-2021-clare/">thebookshop.ie&nbsp;<i class="fas fa-link"></i></a></li>
+									<li><a href="https://www.biblio.com/bookseller_info.php?d=4225560">biblio.ie&nbsp;<i class="fas fa-link"></i></a></li>
+									</ul>-->
+								</div>
+								<div class="col-md">
+										<img src="img/png/plain_book_no_artwork.png" loading="lazy" alt="Echoes From A Civil War, book front cover" class="d-block w-75 mx-auto" />
+								</div>
+						</div>
+       </div>
 
 
   <!-- Books Section -->
