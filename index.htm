@@ -50,6 +50,12 @@
   width: 100%;
   height: auto;
 }
+
+.author-reading {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 	
 	.form-text{		color:#ff4f4f;
 	}
@@ -72,7 +78,7 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">Ciarán Ó Murchadha Books</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -85,7 +91,10 @@
             <a class="nav-link" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#books">Books</a>
+            <a class="nav-link" href="#purchase">Purchase</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#author">Author</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
@@ -119,19 +128,19 @@
   <section id="about" class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h2>The College of St Flannan at Ennis</h2>
-          <p>The College of St Flannan at Ennis is a new history of one of Ireland&#39;s most famous schools. St Flannan&#39;s has been central to the life of Clare over many generations, and it has given tens of thousands of students from all over Killaloe diocese and beyond a thorough and worthwhile education, often in circumstances that were very difficult; great numbers of its alumni have achieved distinction and celebrity in various fields since the College was founded.</p>
-          <p>In its fifteen chapters and 48 pages of photographs, The College of St Flannan at Ennis, gives us an enthralling account of the St Flannan&#39;s story, from its origins in Famine-era Ireland, through the construction phase of the early 1880, the new era of the Intermediate Certificate, and the years of the National Revival. The struggle for national independence also features, largely through the personality of a famous College President, Canon William O&#39;Kennedy. O&#39;Kennedy&#39;s successors are also given detailed consideration; Canons Vaughan, Quinn and Maxwell, outstanding figures all, who steered the College through the grimmest middle decades of the twentieth century. Modern times begin with the serene figure of Canon John Cuddy
-and the inspiration he afforded to his successors and his &#39;professors&#39;, especially the lay staff on whom much of the teaching and administration now gradually devolved.</p>
-
-<p>A fascinating read, this handsomely produced volume is available in hardcover and paperback and is published by Maherantaska Books.</p>
-        </div>
-        <div class="col-md-6">
-        	<div class="image-container">
-        		<!-- <img src="img/webp/ciaran_o_murchadha_reading_his_new_book_the_college_of_st_flannans_at_ennis.webp" alt="Ciaran O Murchadha reading his new book the College of St Flannans at Ennis" class="img-fluid"> -->
+      	<div class="col-md-4">
+        	<div>
+        		<img src="img/webp/ciaran_o_murchadha_reading_his_new_book_the_college_of_st_flannans_at_ennis.webp" alt="Ciaran O Murchadha reading his new book the College of St Flannans at Ennis" class="author-reading">
         	</div>
         </div>
+        <div class="col-md-8">
+          <h2>The College of St Flannan at Ennis</h2>
+          <p>The College of St Flannan at Ennis is a new history of one of Ireland&#39;s most famous schools. St Flannan&#39;s has been central to the life of Clare over many generations, and it has given tens of thousands of students from all over Killaloe diocese and beyond a thorough and worthwhile education, often in circumstances that were very difficult; great numbers of its alumni have achieved distinction and celebrity in various fields since the College was founded.</p>
+          <p>In its fifteen chapters and 48 pages of photographs, The College of St Flannan at Ennis, gives us an enthralling account of the St Flannan&#39;s story, from its origins in Famine-era Ireland, through the construction phase of the early 1880, the new era of the Intermediate Certificate, and the years of the National Revival. The struggle for national independence also features, largely through the personality of a famous College President, Canon William O&#39;Kennedy. O&#39;Kennedy&#39;s successors are also given detailed consideration; Canons Vaughan, Quinn and Maxwell, outstanding figures all, who steered the College through the grimmest middle decades of the twentieth century. Modern times begin with the serene figure of Canon John Cuddy and the inspiration he afforded to his successors and his &#39;professors&#39;, especially the lay staff on whom much of the teaching and administration now gradually devolved.</p>
+
+          <p>A fascinating read, this handsomely produced volume is available in hardcover and paperback and is published by Maherantaska Books.</p>
+        </div>
+        
       </div>
     </div>
   </section>
@@ -178,8 +187,8 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 </section> -->
 
 <!-- Purchase Section Start-->
-        <section class="bg-dark">
-            <div class="container p-4 text-light">
+        <section id="purchase" class="bg-dark">
+            <div class="container py-5 text-light">
 							<div class="row g-3">
 								<div class="col-md pt-2 pb-2">
 									<h2 class="pt-1">Order Your Copy</h2>
@@ -225,11 +234,11 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
        </div>
 
   
-<!-- About Author Section -->
-  <section id="about" class="bg-light py-5">
+<!-- Author Section -->
+  <section id="author" class="bg-light py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6">
           <h2 class="pb-3"><span><i class="bi bi-pen"></i>&nbsp;</span>The Author</h2>
             	<p class="lead">Ciarán Ó Murchadha is a well-known historian, an independent scholar who has written, lectured and broadcast widely on many aspects of Ireland's history. His <em>The Great Famine: Ireland's Agony 1845-1952 (London, 2011)</em> has been acclaimed internationally. An alumnus of St Flannan's College, and a former teacher there, he is uniquely placed to tell its fscinating story.
 </p>
@@ -243,7 +252,7 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 									<li><a href="href="https://www.amazon.co.uk/Figures-Famine-Landscape-Ciar%C3%A1n-Murchadha-ebook/dp/B01L92DIVA/ref=sr_1_1?crid=2DJAU769HN2ET&keywords=figures+in+a+famine+landscape&qid=1684429074&s=books&sprefix=figures+in+a+famine+landscape%2Cstripbooks%2C135&sr=1-1" traget="_blank">Figures in a Famine Landscape (London, 2016)</a></li>
               </ul>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
             <img class="author-image" src="img/jpg/ciaran_O_murchadha_with_his_book_the_great_famine.jpg" alt="Ciaran o Murchadha with his book The Great Famine">
         </div>
       </div>
@@ -290,10 +299,10 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
   </section>-->
   
 <!-- Contact Section -->
-<section id="contact"class="bg-dark text-light p-4 text-sm-start">
+<section id="contact" class="bg-dark text-light py-5 text-sm-start">
   	<div class="container">
   	
-    	<h2><span><i class="bi bi-envelope"></i>&nbsp;</span>Contact Ciarán Ó Murchadha</h2>
+    	<h2><span><i class="bi bi-envelope"></i>&nbsp;&nbsp;</span>Contact Ciarán Ó Murchadha</h2>
       <p>For inquiries regarding talks and presentations on the books I have written, please feel free to contact me via email. I would be delighted to discuss speaking engagements and share insights about my work. You can use the contact form below reach me by email. Thank you for your interest.</p>
     
 		<form class="p-3" action="https://formspree.io/f/xrgvdwwy" method="POST">
@@ -328,10 +337,19 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 </section>
 
   <!-- Footer -->
-  <footer class="bg-dark text-light text-center py-3">
+  <footer class="bg-light text-dark text-center py-3">
     <div class="container">
-      <p class="py-1">omurchadhabooks.ie &#169; 2023 | Ciarán Ó Murchadha Books | All rights reserved.</p>
-    </div>
+    	<div class="row">
+        <div class="col-md-4">
+      		<p class="py-1">omurchadhabooks.ie</p>
+    		</div>
+    		<div class="col-md-4">
+      		<p class="py-1"><span><i class="bi bi-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span> Ciarán Ó Murchadha Books&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-book"></i></span></p>
+    		</div>
+    		<div class="col-md-3">
+      		<p class="py-1">All rights reserved. &#169; 2023</p>
+    		</div>
+    	</div>
   </footer>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
