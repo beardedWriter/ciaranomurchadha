@@ -10,6 +10,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
 
+  <!-- [2] Bootstrap's specific general FREE icon set-->
+	<!-- This is loaded asynrously to allow page render/draw/display quicker -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" media="print" onload="this.media='all'">
+
   <!-- ICON sets (using FREE ones from [1] Font-Awesome and [2] Bootstrap) -->
 	<!-- [1] Font-Awesome specific web domain icon set-->
 	<link rel="preconnect" href="https://ka-f.fontawesome.com" />
@@ -29,6 +33,23 @@
             background-attachment: fixed;
             height: 500px;
 	}
+
+	.image-container {
+  background-image: url('img/webp/ciaran_o_murchadha_reading_his_new_book_the_college_of_st_flannans_at_ennis.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 100%; /* Adjust the aspect ratio (height/width) to match your image */
+  position: relative;
+}
+
+.author-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 	
 	.form-text{		color:#ff4f4f;
 	}
@@ -107,7 +128,9 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 <p>A fascinating read, this handsomely produced volume is available in hardcover and paperback and is published by Maherantaska Books.</p>
         </div>
         <div class="col-md-6">
-          <img style="border-radius: 25px; border: 5px solid #73AD21; padding: 5px;" src="img/webp/ciaran_o_murchadha_reading_his_new_book_the_college_of_st_flannans_at_ennis.webp" alt="Ciaran O Murchadha reading his new book the College of St Flannans at Ennis" class="img-fluid">
+        	<div class="image-container">
+        		<!-- <img src="img/webp/ciaran_o_murchadha_reading_his_new_book_the_college_of_st_flannans_at_ennis.webp" alt="Ciaran O Murchadha reading his new book the College of St Flannans at Ennis" class="img-fluid"> -->
+        	</div>
         </div>
       </div>
     </div>
@@ -201,9 +224,34 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
 						</div>
        </div>
 
+  
+<!-- About Author Section -->
+  <section id="about" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2 class="pb-3"><span><i class="bi bi-pen"></i>&nbsp;</span>The Author</h2>
+            	<p class="lead">Ciarán Ó Murchadha is a well-known historian, an independent scholar who has written, lectured and broadcast widely on many aspects of Ireland's history. His <em>The Great Famine: Ireland's Agony 1845-1952 (London, 2011)</em> has been acclaimed internationally. An alumnus of St Flannan's College, and a former teacher there, he is uniquely placed to tell its fscinating story.
+</p>
+			
+			<p>Other Books by Ciarán Ó Murchadha</p>
+
+              <ul>
+                	<li><a href="https://www.amazon.co.uk/Great-Famine-Irelands-Agony-1845-1852/dp/1472507789" traget="_blank">The Great Famine: Ireland’s Agony 1845-1852 (London, 2011)</a></li>
+                	<li>The Diocese of Killaloe: An Illustrated History (Belfast, 2007)</li>
+                	<li>Sable Wings over the Land: Ennis and its Wider Community during the Great Famine (Ennis, 1998)</li>
+									<li><a href="href="https://www.amazon.co.uk/Figures-Famine-Landscape-Ciar%C3%A1n-Murchadha-ebook/dp/B01L92DIVA/ref=sr_1_1?crid=2DJAU769HN2ET&keywords=figures+in+a+famine+landscape&qid=1684429074&s=books&sprefix=figures+in+a+famine+landscape%2Cstripbooks%2C135&sr=1-1" traget="_blank">Figures in a Famine Landscape (London, 2016)</a></li>
+              </ul>
+        </div>
+        <div class="col-md-4">
+            <img class="author-image" src="img/jpg/ciaran_O_murchadha_with_his_book_the_great_famine.jpg" alt="Ciaran o Murchadha with his book The Great Famine">
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Books Section -->
-  <section id="books" class="bg-light py-5">
+  <!-- <section id="books" class="bg-light py-5">
     <div class="container">
       <h2>Books by Ciarán Ó Murchadha</h2>
       <div class="row">
@@ -239,13 +287,13 @@ and the inspiration he afforded to his successors and his &#39;professors&#39;, 
         </div>
       </div>
     </div>
-  </section>
+  </section>-->
   
 <!-- Contact Section -->
 <section id="contact"class="bg-dark text-light p-4 text-sm-start">
   	<div class="container">
   	
-    	<h2>&nbsp; Contact Ciarán Ó Murchadha</h2>
+    	<h2><span><i class="bi bi-envelope"></i>&nbsp;</span>Contact Ciarán Ó Murchadha</h2>
       <p>For inquiries regarding talks and presentations on the books I have written, please feel free to contact me via email. I would be delighted to discuss speaking engagements and share insights about my work. You can use the contact form below reach me by email. Thank you for your interest.</p>
     
 		<form class="p-3" action="https://formspree.io/f/xrgvdwwy" method="POST">
