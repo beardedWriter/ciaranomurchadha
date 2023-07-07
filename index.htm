@@ -34,53 +34,70 @@
     	font-size:1.5em;
 		}
 
+		.frame {
+  		border:1em solid #fff;
+  		box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+		}
+
+		.tilt-right {
+			-ms-transform: rotate(2deg);
+			-webkit-transform: rotate(2eg);
+			transform: rotate(2eg);
+		}
+
+		.tilt-right:hover {
+			-ms-transform: rotate(2deg);
+			-webkit-transform: rotate(2deg);
+			transform: rotate(2deg);
+		}
+
   	.parallax {
 	    background: url('img/jpg/st_flannans_college_ennis.jpg') no-repeat center;
-    	    background-attachment: scroll;
-            background-size: auto;
-  	    background-size: cover;
-            background-attachment: fixed;
-            height: 500px;
-	}
+    	background-attachment: scroll;
+      background-size: auto;
+  	  background-size: cover;
+      background-attachment: fixed;
+      height: 500px;
+		}
 
-	.image-container {
-  background-image: url('img/webp/ciaran_o_murchadha_reading_his_new_book_the_college_of_st_flannans_at_ennis.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 0;
-  padding-top: 100%; /* Adjust the aspect ratio (height/width) to match your image */
-  position: relative;
-}
+		.image-container {
+		  background-image: url('img/webp/ciaran_o_murchadha_reading_his_new_book_the_college_of_st_flannans_at_ennis.webp');
+		  background-size: cover;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  width: 100%;
+		  height: 0;
+		  padding-top: 100%; /* Adjust the aspect ratio (height/width) to match your image */
+		  position: relative;
+		}
 
-.author-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+		.author-image {
+		  display: block;
+		  width: 100%;
+		  height: auto;
+		}
 
-.author-reading {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+		.author-reading {
+		  display: block;
+		  width: 100%;
+		  height: auto;
+		}
 	
-	.form-text{		color:#ff4f4f;
-	}
+		.form-text{		color:#ff4f4f;
+		}
 
-	.nav-link {
-	  display: block;
-	  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-	  font-size: var(--bs-nav-link-font-size);
-	  font-weight: var(--bs-nav-link-font-weight);
-	  color: var(--bs-nav-link-color);
-	  text-decoration: none;
-	  background: 0 0;
-	  background-color: rgba(0, 0, 0, 0);
-	  border: 0;
-	  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
-  }
+		.nav-link {
+		  display: block;
+		  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+		  font-size: var(--bs-nav-link-font-size);
+		  font-weight: var(--bs-nav-link-font-weight);
+		  color: var(--bs-nav-link-color);
+		  text-decoration: none;
+		  background: 0 0;
+		  background-color: rgba(0, 0, 0, 0);
+		  border: 0;
+		  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+	  }
   </style>
 
 </head>
@@ -100,7 +117,7 @@
             <a class="nav-link" href="#about"><i class="bi bi-house"></i>&nbsp;About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-warning btn-sm" href="#purchase"><i class="bi bi-cart4"></i>&nbsp;ORDER</a>
+            <a class="nav-link" href="#purchase"><i class="bi bi-cart4"></i>&nbsp;ORDER</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#author"><i class="bi bi-person"></i>&nbsp;Author</a>
@@ -262,7 +279,7 @@
               </ul>
         </div>
         <div class="col-md-6">
-            <img class="author-image" src="img/jpg/ciaran_O_murchadha_with_his_book_the_great_famine.jpg" alt="Ciaran o Murchadha with his book The Great Famine">
+            <img class="author-image frame" src="img/jpg/ciaran_O_murchadha_with_his_book_the_great_famine.jpg" alt="Ciaran o Murchadha with his book The Great Famine">
         </div>
       </div>
     </div>
