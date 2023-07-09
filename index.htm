@@ -26,16 +26,28 @@
   	    font-family: 'Lora', serif;
   	}
 
-  	ul {
-  		list-style-type: none; /* Remove default bullet points */
+  	p {
+  		font-size: 1rem;
+  	}
+
+  	.booklinks ul {
+  		list-style-type: none;
+  		padding:0;
 		}
 
-		ul li::before {
-		  content: "\F194";
+		.booklinks ul li::before {
+		  content: "\f194";
 		  display: inline-block;
-		  font-family: "Bootstrap Icons"; 
-		  font-size: 14px; 
-		  margin-right: 5px;
+		  font-family: "bootstrap-icons";
+		  font-size: 1.25em;
+		  margin-right: 0.5em;
+		  margin-left: 0;
+		  padding-top:0em;
+		}
+
+		.booklinks ul li{
+		  display: flex;
+  		align-items: center;
 		}
 
   	i.paymentMethodIcons {
@@ -72,12 +84,12 @@
       height: 500px;
 		}
 
-		#booklinks {
+		.booklinks a{
 			text-decoration: none;
 			color: inherit;
 		}
 
-		#booklinks a:hover {
+		.booklinks a:hover {
   		text-decoration: underline;
 		}
 
@@ -287,17 +299,17 @@
   <section id="author" class="bg-light py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-6 booklinks">
           <h2 class="pb-3"><span><i class="bi bi-pen"></i>&nbsp;</span>The Author</h2>
             	<p class="lead">Ciarán Ó Murchadha is a well-known historian, an independent scholar who has written, lectured and broadcast widely on many aspects of Ireland's history. His <em>The Great Famine: Ireland's Agony 1845-1952 (London, 2011)</em> has been acclaimed internationally. An alumnus of St Flannan's College, and a former teacher there, he is uniquely placed to tell its fscinating story.</p>
 			
 					<h3>Other Books by Ciarán Ó Murchadha</h3>
 
 						<ul>
-              <li><a id="booklinks" href="https://www.amazon.co.uk/Great-Famine-Irelands-Agony-1845-1852/dp/1472507789" target="_blank">The Great Famine: Ireland’s Agony 1845-1852 (London, 2011)</a></li>
-              <li><a id="booklinks" href="" target="_blank">The Diocese of Killaloe: An Illustrated History (Belfast, 2007)</a></li>
-              <li><a id="booklinks" href="" target="_blank">Sable Wings over the Land: Ennis and its Wider Community during the Great Famine (Ennis, 1998)</a></li>
-							<li><a id="booklinks" href="https://www.amazon.co.uk/Figures-Famine-Landscape-Ciar%C3%A1n-Murchadha-ebook/dp/B01L92DIVA/ref=sr_1_1?crid=2DJAU769HN2ET&keywords=figures+in+a+famine+landscape&qid=1684429074&s=books&sprefix=figures+in+a+famine+landscape%2Cstripbooks%2C135&sr=1-1" target="_blank">Figures in a Famine Landscape (London, 2016)</a></li>
+              <li><a href="https://www.amazon.co.uk/Great-Famine-Irelands-Agony-1845-1852/dp/1472507789" target="_blank">The Great Famine: Ireland’s Agony 1845-1852 (London, 2011)</a></li>
+              <li><a href="" target="_blank">The Diocese of Killaloe: An Illustrated History (Belfast, 2007)</a></li>
+              <li><a href="" target="_blank">Sable Wings over the Land: Ennis and its Wider Community during the Great Famine (Ennis, 1998)</a></li>
+							<li><a href="https://www.amazon.co.uk/Figures-Famine-Landscape-Ciar%C3%A1n-Murchadha-ebook/dp/B01L92DIVA/ref=sr_1_1?crid=2DJAU769HN2ET&keywords=figures+in+a+famine+landscape&qid=1684429074&s=books&sprefix=figures+in+a+famine+landscape%2Cstripbooks%2C135&sr=1-1" target="_blank">Figures in a Famine Landscape (London, 2016)</a></li>
             </ul>
         </div>
         <div class="col-md-6">
