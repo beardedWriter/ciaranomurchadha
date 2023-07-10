@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+
 
   <!-- [2] Bootstrap's specific general FREE icon set-->
 	<!-- This is loaded asynrously to allow page render/draw/display quicker -->
@@ -78,6 +80,15 @@
 		.booklinks ul li{
 		  display: flex;
   		align-items: center;
+		}
+
+		.footer-items p {
+			/*display: flex; */
+			align-items: center;
+		}
+		.footer-items a {
+			/*display: flex; */
+			align-items: center;
 		}
 
   	i.paymentMethodIcons {
@@ -169,9 +180,9 @@
 
 <body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed">
     <div class="container">
-      <a class="navbar-brand" href="#">Ciarán Ó Murchadha Books</a>
+      <a class="navbar-brand" href="#"><span style="font-size:2.5rem;font-family: 'Mrs Saint Delafield', cursive;">Ciarán Ó Murchadha Books</span></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -388,7 +399,7 @@
 </section>
 
   <!-- Footer -->
-  <footer class="bg-light text-dark text-center py-3">
+  <footer class="footer-items bg-light text-dark text-center py-3">
     <div class="container">
     	<div class="row">
         <div class="col-md-4">
@@ -397,8 +408,13 @@
     		<div class="col-md-4">
       		<p class="py-1"><span><i class="bi bi-book"></i>&nbsp;&nbsp;&nbsp;&nbsp;</span> Ciarán Ó Murchadha Books&nbsp;&nbsp;&nbsp;&nbsp;<i class="bi bi-book"></i></span></p>
     		</div>
-    		<div class="col-md-3">
-      		<p class="py-1">All rights reserved. &#169; 2023</p>
+    		<div class="col-md-4">
+      		<p class="py-1">2023 • All rights reserved&nbsp;&#169; </p>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<a href="#"><i style="padding:0px;font-size:2rem;" class="bi bi-arrow-up-square-fill"></i></a>
     		</div>
     	</div>
   </footer>
@@ -538,16 +554,6 @@
 	submitButton.addEventListener("click", checkSubmission);
 
  </script>
-
- <script>
-  const submitButton = document.getElementById("submitEmailButton");
-  const submissionHelp = document.getElementById("submissionHelp");
-
-  submitButton.addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent form submission
-    submissionHelp.style.display = "block"; // Show the submission help content
-  });
-</script>
 
 
 </body>
