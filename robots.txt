@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: https://www.omurchadhabooks.ie/slideshow.html
+Disallow: https://www.omurchadhabooks.ie/test_email.html
+Disallow: https://www.omurchadhabooks.ie/email_bootstrap_template_1.html
+
+Sitemap: https://www.omurchadhabooks.ie/sitemap.xml
